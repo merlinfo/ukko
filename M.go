@@ -32,6 +32,7 @@ func main() {
 	
 	merlin.Stdout = os.Stdout
 	merlin.Stdin = os.Stdin
+	merlin.Stderr = os.Stderr
 
 	if err := merlin.Run(); err != nil {
 		log.Fatal(err)
