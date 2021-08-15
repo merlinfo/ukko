@@ -12,7 +12,7 @@ fi
 args="$SPELLBOOK ;spellbook "
 files=""
 
-// summon each file supplied by arguments
+# summon each file supplied by arguments
 
 for file in $@; do
 	files+="$file ;summon "
