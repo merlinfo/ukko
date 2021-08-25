@@ -1,7 +1,7 @@
-# M
+# Æsop
 
-A simple Merlin command wrapper
+The standard Merlin command wrapper
 
-Usage: `M [FILE]...`
+Usage: `aesop [FILE]...`
 
 Enviroment variables: `SPELLBOOK` (location for your default spellbook) 

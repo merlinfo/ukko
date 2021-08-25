@@ -1,5 +1,5 @@
 #!/bin/sh
-# M - the standard merlin command wrapper
+# Aesop - the standard merlin command wrapper
 
 # set a default value for SPELLBOOK when it is empty
 
