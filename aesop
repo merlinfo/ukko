@@ -7,7 +7,7 @@ if [ -z "$SPELLBOOK" ]; then
 	SPELLBOOK=~/.merlin/spellbook.mn
 fi
 
-# call the ;spell book command on the config locale
+# call the ;spellbook command on the config locale
 
 args="$SPELLBOOK ;spellbook "
 files=""
