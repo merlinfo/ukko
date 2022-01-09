@@ -31,7 +31,7 @@ case "$1" in
 		$configured < "$2" ; exit
 		;;
 	"-h") # print help
-		printf "Usage: %s [-rReEh] [FILE]...\n" "$0" ; exit
+		printf "Usage: %s [-rReEh] [FILE]...\n" "$(basename "$0")" ; exit
 		;;
 esac
 
