@@ -1,0 +1,50 @@
+#!/bin/sh
+# Ukko - the standard merlin command wrapper
+
+# set a default value for SPELLBOOK when it is empty
+
+if [ -z "$SPELLBOOK" ]; then
+	SPELLBOOK=~/.merlin/spellbook.mn
+fi
+
+# call the ;spellbook command on the config locale
+
+args="$SPELLBOOK ;spellbook "
+files=""
+
+raw="merlin -si"
+configured="$raw $args"
+
+# parse flags
+
+case "$1" in
+	"-r") # raw mode
+		$raw ; exit
+		;;
+	"-R") # configured raw mode
+		$configured ; exit
+		;;
+	"-e") # evaluate a file
+		$raw < "$2" ; exit
+		;;
+	"-E") # evalute a file with the spellbook loaded
+		$configured < "$2" ; exit
+		;;
+	"-h") # print help
+		printf "Usage: %s [-rReEh] [FILE]...\n" "$0" ; exit
+		;;
+esac
+
+# summon each file supplied by arguments
+
+for file in "$@"; do
+	files="$files$file ;summon "
+done
+
+# stitch it together..
+
+args="$args$files"
+
+# run!
+
+merlin "$args"
