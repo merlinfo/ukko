@@ -12,4 +12,10 @@ The standard Merlin command wrapper
 
 `-E`: `-e` with the `SPELLBOOk` loaded
 
-Enviroment variables: `SPELLBOOK` (location for your default spellbook) 
+`-m`: Don't load `.manifest.mn`
+
+`-h`: Display help
+
+Enviroment variables: `SPELLBOOK` (location for your default spellbook)
+
+Dynamic configurations: `ukko` will load any file named '.manifest.mn` in the current directory. This can be disabled with the `-m` flag.

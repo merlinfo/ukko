@@ -15,7 +15,7 @@ fi
 
 # call the ;spellbook command on the config locale
 
-args="$SPELLBOOK ;spellbook $manifest "
+args="$SPELLBOOK ;spellbook"
 files=""
 
 raw="merlin -si"
@@ -36,8 +36,11 @@ case "$1" in
 	"-E") # evalute a file with the spellbook loaded
 		$configured < "$2" ; exit
 		;;
+	"-m") # disable the loading of the manifest file
+		manifest=""
+		;;
 	"-h") # print help
-		printf "Usage: %s [-rReEh] [FILE]...\n" "$(basename "$0")" ; exit
+		printf "Usage: %s [-rReEmh] [FILE]...\n" "$(basename "$0")" ; exit
 		;;
 esac
 
@@ -49,7 +52,7 @@ done
 
 # stitch it together..
 
-args="$args$files"
+args="$args $manifest $files"
 
 # run!
 
