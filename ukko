@@ -7,9 +7,15 @@ if [ -z "$SPELLBOOK" ]; then
 	SPELLBOOK=~/.merlin/spellbook.mn
 fi
 
+# if a ".manifest.mn" file exists in the current directory, load it.
+
+if [ -f "./.manifest.mn" ]; then
+	manifest=".manifest.mn ;spellbook"
+fi
+
 # call the ;spellbook command on the config locale
 
-args="$SPELLBOOK ;spellbook "
+args="$SPELLBOOK ;spellbook $manifest "
 files=""
 
 raw="merlin -si"
