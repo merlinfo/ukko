@@ -2,7 +2,7 @@
 
 The standard Merlin command wrapper
 
-`Usage: ukko [-rReEh] [FILE]...`
+`Usage: ukko [-rReEmh] [FILE]...`
 
 `-r`: Enter raw mode, parse stdin and allow interupts
 
@@ -18,4 +18,4 @@ The standard Merlin command wrapper
 
 Enviroment variables: `SPELLBOOK` (location for your default spellbook)
 
-Dynamic configurations: `ukko` will load any file named '.manifest.mn` in the current directory. This can be disabled with the `-m` flag.
+Dynamic configurations: `ukko` will load any file named `.manifest.mn` in the current directory. This can be disabled with the `-m` flag.
